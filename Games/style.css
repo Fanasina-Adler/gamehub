@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+@import url('https://googleapis.com');
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    gap: 1px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #010116;
+    color: white;
+    height: 8vh;
+    align-items: center;
+}
+
+.header .titre {
+    padding-left: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    width: 50%;
+}
+
+.header .titre span {
+    color: #af0404;
+}
+
+.header .titre2 {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header .titre2 .recherche input {
+    height: 35px;
+    width: 250px;
+    border-radius: 30px;
+    border: none;
+    padding-left: 15px;
+    background: #ffffff33;
+    color: white;
+}
+
+.header img {
+    width: 45px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 84vh;
+    gap: 1px;
+}
+
+.container .navbar {
+    width: 15%;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #010116;
+    color: white;
+}
+
+.container .navbar .accueil ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid;
+}
+
+.container .navbar .accueil ul li {
+    padding: 10px 20px;
+    width: 100px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.container .navbar .accueil .active {
+    background: linear-gradient(90deg, rgba(26, 26, 240, 0.616)10%, #010116);
+    /* Aia elah?? aia manakory 
+    Ndraso alefa @ Git @zay ok alatsahi fa kitihatsika sepitso fa le nom nleh jeux mbola mitovy aby 😭😭
+    Alefa ao fotsn aloh hijerena n poziny😆*/
+    border-left: 5px solid #af0505;
+    color: #af0505;
+    text-shadow: 1px 1px 8px #ffffff;
+    /*Mety va? Hotra tady ts hohita zan le soratra ataovy somary mazava hotranito karazana shadow reny ngamba */
+}
+/* ataovy eo fa hotra ts hitako ze ataoo */
+
+.container .navbar .categorie ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.container .navbar .categorie ul li {
+    padding: 10px 20px;
+    width: 100px;
+    border-radius: 10px;
+    font-size: 18px;
+
+}
+
+.container .affichage {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    /* gap: 1px; */
+    height: 84vh;
+}
+/* Deovaina aby zan n bg sa?? de ts aiko ndao ovaina aby
+ */
+.container .affichage .bienvenue {
+    background-color: #010116;
+    width: 100%;
+    height: 27vh;
+    padding-left: 30px;
+    display: flex;
+}
+/* Hotra ts de ampy couleur zan , Maninona raha apetaka alouh le sary fa zay no mampisy loko eo, OK
+Hitady sary aloh ewaewa aona iio? maninona raha le maintso sy mena reny aiza elah teo
+Tapaka izy teo ok Mety? ataovy anio fa le teo tss couleur hafa👍
+Sod hatory aloh ? farany le eo am gamehub ambony sy acceuil de bn8 avieo */
+.container .affichage .bienvenue h1 span {
+    font-size: 5rem;
+    padding-right: 20px;
+    background: linear-gradient(90deg, #ff0000, #1046f8);
+    background-clip: text;
+    color: transparent;
+    font-family: 'Bangers', curive;
+    /* font-family: 'Russo One', sans-serif; */
+    /* font-family: 'Orbitron', sans-serif; */
+}
+
+.container .affichage .menu {
+    background-color: #010116;
+    width: 100%;
+    height: 7vh;
+}
+
+.container .affichage .menu ul {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+    padding-left: 10px;
+}
+
+.container .affichage .menu ul li {
+    padding: 10px;
+    border: 1px solid;
+    width: 75px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.container .affichage .liste {
+    background-color: #010116;
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
+.container .affichage .liste .card {
+    width: 23%;
+    height: 250px;
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    background: #00ffff;
+
+    clip-path: polygon(15% 0,
+            100% 0,
+            100% 95%,
+            95% 100%,
+            0 100%,
+            0 15%);
+}
+
+/* Intérieur de la card */
+.container .affichage .liste .card::before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+
+    background: #010116;
+
+    clip-path: polygon(15% 0,
+            100% 0,
+            100% 95%,
+            95% 100%,
+            0 100%,
+            0 15%);
+
+    z-index: -1;
+}
+
+.container .affichage .liste .card .photo {
+    display: flex;
+    align-items: center;
+    height: 40%;
+    width: 90%;
+    overflow: hidden;
+    padding: 4px;
+    /* padding-top: 4px; */
+    margin-top: 6px;
+    margin-left: 6px;
+    /* Le 1 sa 2 no tsra? le 1 fa tokony mbola ovaina alouh kay lokonio soratra io, ewa
+    De ny border sy bouton reo koa ewa de le soratra reny ataovy mitovy am manette ry ambony ry aby ny lokony red and blue. */
+}
+
+.container .affichage .liste .card .photo img {
+    height: 150%;
+}
+
+.container .affichage .liste .card .text {
+    padding-left: 10px;
+}
+
+.container .affichage .liste .card .text h1 {
+    /* font-family: 'Luckiest Guy', 'Bungee', cursive; */
+    text-transform: uppercase;
+    font-family: 'Bangers', curive;
+    background: linear-gradient(90deg,#eee7e7, #cf100a);
+    color: transparent;
+    background-clip: text;
+}
+
+.container .affichage .liste .card .bouton {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: end;
+}
+
+.container .affichage .liste .card .bouton button {
+    background: #00ffff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+.footer {
+    background-color: #010116;
+    width: 100%;
+    display: flex;
+    height: 8vh;
+    justify-content: space-between;
+}
